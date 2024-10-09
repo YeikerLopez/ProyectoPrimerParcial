@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Color de fondo de la página */
+    margin: 0; 
+    padding: 0; 
+}
+
+header {
+    background: #808080; /* Color de la franja gris ULEAM*/
+    color: white; 
+}
+
+.top-bar {
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 20px; 
+}
+
+.uleam-logo {
+    height: 50px; 
+    margin-right: 20px; /* Margen a la derecha del logo */
+}
+
+.navbar {
+    display: flex; /* Utiliza flexbox para alinear los elementos de la barra de navegación */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+}
+
+.navbar ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+}
+
+.navbar ul li {
+    display: inline; 
+    margin-left: 20px; /* Espacio entre los botones */
+}
+
+.navbar ul li a {
+    color: white; 
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 10px; 
+    transition: background-color 0.3s; 
+}
+
+h2, h3 {
+    color: #808080; /* Color del texto de los encabezados */
+}
+
+main {
+    padding: 20px; /* Espaciado interior del main */
+}
+
+#progress-table {
+    width: 100%; /* Ancho completo de la tabla */
+    border-collapse: collapse; 
+    margin-bottom: 20px;
+}
+
+#progress-table th, #progress-table td {
+    border: 1px solid #ccc; /* Bordes de la tabla */
+    padding: 10px; 
+    text-align: left; 
+}
+
+#progress-table th {
+    background-color: #FF0000; /* Color de fondo para el encabezado de la tabla */
+    color: white; 
+}
+
+footer {
+    background: #808080; /* Color de la franja gris en el pie de página */
+    color: white; /* Color del texto en el pie de página */
+    text-align: center;
+    padding: 10px 0; /* Espaciado interior del pie de página */
+}
+
+
+
+#calendar {
+    margin-top: 20px; /* Margen superior del calendario */
+}

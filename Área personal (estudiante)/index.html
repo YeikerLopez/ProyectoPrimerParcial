@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Personal - Estudiante</title>
+    <!-- Enlace al archivo CSS externo para estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Biblioteca Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Estilos y scripts para el calendario (FullCalendar) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+</head>
+<body>
+    <!-- Cabecera con logo, título y barra de navegación -->
+    <header>
+        <div class="header-container">
+            <img src="logo_ULEAM_blanco.png" alt="Logo ULEAM" class="logo">
+            <h1>Área Personal</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="register.html">Registrarse</a></li>
+                    <li><a href="#manage-practices">Gestionar Prácticas</a></li>
+                    <li><a href="companies.html">Empresas Asociadas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal del área personal -->
+    <main>
+        <section class="dashboard">
+            <!-- Sección del perfil del estudiante -->
+            <div class="profile-section">
+                <img src="personarandom.jpg" alt="Foto de perfil" class="profile-pic">
+                <button class="change-pic">Cambiar Foto</button>
+                <h2 id="student-name">Yeiker Lopez</h2>
+                <p id="student-email">yeiker.lopez@gmail.com</p>
+                <p>Descripción: Estudiante de Ingeniería de Sistemas, apasionado por la programación y el desarrollo de software.</p>
+                <button class="edit-profile">Editar Perfil</button>
+                <!-- Nueva sección para subir documentos -->
+                <div class="upload-documents">
+                    <h3>Subir Documentos de Prácticas</h3>
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <label for="practice-document">Seleccionar archivo (PDF):</label>
+                        <input type="file" id="practice-document" name="practice-document" accept="application/pdf" required>
+                        <button type="submit">Subir Documento</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sección de prácticas en proceso -->
+            <div class="practices-section">
+                <h2>Prácticas en Proceso</h2>
+                <canvas id="hoursChart"></canvas>
+                <p id="no-practices-message" style="display: none;">No tiene prácticas en proceso.</p>
+                <p>Tu estado de prácticas pre-profesionales, incluyendo horas registradas y el total de horas requeridas.</p>
+                <ul id="practice-list">
+                    <li>Práctica en <strong>Google</strong>: Desde <strong>01/10/2024</strong> hasta <strong>30/11/2024</strong> - Horas: 50</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección del calendario de registro de horas diarias -->
+        <section class="calendar-section">
+            <h2>Registro de Horas Diarias</h2>
+            <div id="calendar" style="max-width: 800px; margin: 0 auto;"></div>
+        </section>
+    </main>
+
+    <!-- Pie de página con información de derechos reservados -->
+    <footer>
+        <p>© 2024 Universidad Laica Eloy Alfaro de Manabí | Todos los derechos reservados.</p>
+    </footer>
+    <!-- Enlace al archivo de JavaScript para funcionalidades adicionales -->
+    <script src="scripts.js"></script>
+</body>
+</html>

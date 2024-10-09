@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Empresas Asociadas</title>
+</head>
+<body>
+    <!-- Barra superior gris -->
+    <div class="top-bar">
+        <p>Prácticas Pre Profesionales ULEAM</p>
+    </div>
+
+    <!-- Barra roja con las pestañas de navegación -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Empresas Asociadas</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Iniciar Sesión</a></li>
+                    <li><a href="#">Registrarse</a></li>
+                    <li><a href="#">Información</a></li>
+                    <li><a href="#">Empresas Asociadas</a></li>
+                    <li><a href="#">Gestionar Prácticas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="companies-gallery">
+        <!-- Tarjeta de ejemplo de una empresa -->
+        <div class="company-card">
+            <img src="google.jpg" alt="Empresa 1">
+            <div class="company-info">
+                <h2>Google</h2>
+                <p>Desarrollo de software innovador y tecnologías de vanguardia.</p>
+                <div class="rating">
+                    <span>⭐⭐⭐⭐☆</span>
+                    <p>(4.5 de 5)</p>
+                </div>
+                <button class="show-more-btn" onclick="showDetails('Google')">Mostrar Más</button>
+            </div>
+        </div>
+
+        <div class="company-card">
+            <img src="tesla.png" alt="Empresa 2">
+            <div class="company-info">
+                <h2>Tesla</h2>
+                <p>Investigación y desarrollo en vehículos eléctricos y energía renovable.</p>
+                <div class="rating">
+                    <span>⭐⭐⭐☆☆</span>
+                    <p>(3.8 de 5)</p>
+                </div>
+                <button class="show-more-btn" onclick="showDetails('Tesla')">Mostrar Más</button>
+            </div>
+        </div>
+
+        <div class="company-card">
+            <img src="netflix.jpg" alt="Empresa 3">
+            <div class="company-info">
+                <h2>Netflix</h2>
+                <p>Plataforma de streaming con contenido original y variedad de géneros.</p>
+                <div class="rating">
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <p>(5.0 de 5)</p>
+                </div>
+                <button class="show-more-btn" onclick="showDetails('Netflix')">Mostrar Más</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal para mostrar detalles de la empresa -->
+    <div class="modal" id="companyModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Nombre de la Empresa</h2>
+            <img id="modal-image" src="" alt="Imagen de la empresa">
+            <p id="modal-description">Descripción detallada de la empresa.</p>
+            <h3>Puestos Disponibles (50 plazas por semestre)</h3>
+            <ul id="modal-positions">
+                <li>Desarrollador de Software</li>
+                <li>Analista de Datos</li>
+            </ul>
+            <div class="modal-rating">
+                <p>Calificación:</p>
+                <span>⭐⭐⭐⭐☆ (4.5 de 5)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra inferior gris -->
+    <footer class="footer">
+        <p>© 2024 Universidad Laica Eloy Alfaro de Manabí | Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

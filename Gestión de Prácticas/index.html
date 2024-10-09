@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Gestión de Prácticas</title> <!-- Título de la página -->
+</head>
+<body>
+    <div class="header"> <!-- Cabecera de la página -->
+        <h1>Gestión de Prácticas</h1> 
+        <nav>
+            <a href="#">Inicio</a> 
+            <a href="#">Iniciar Sesión</a> 
+            <a href="#">Registrarse</a> 
+            <a href="#">Gestionar Prácticas</a> 
+        </nav>
+    </div>
+
+    <div class="container"> 
+        <button class="new-application-btn">Nueva Postulación</button> <!-- Botón para nueva postulación -->
+
+        
+        <div class="modal" id="applicationModal"> 
+            <div class="modal-content"> 
+                <span class="close">&times;</span> 
+                <h2>Seleccione una Empresa y Puesto</h2> 
+
+                <label for="company">Empresa</label> 
+                <select id="company" onchange="updatePositions()"> 
+                    <option value="Google">Google</option> 
+                    <option value="Tesla">Tesla</option>
+                    <option value="Netflix">Netflix</option> 
+                </select>
+
+                <label for="position">Puesto</label> 
+                <select id="position" onchange="updateDetails()"> 
+                    <option value="">Seleccione un puesto</option> 
+                </select>
+
+                <div id="details" style="display: none;"> <!-- Detalles de la postulación, ocultos inicialmente -->
+                    <p id="companyLocation"></p> 
+                    <p id="applicationReceiver"></p> 
+                    <p id="activitiesDescription"></p> 
+                </div>
+
+                <label for="file-input" id="file-label">Subir CV en PDF</label>
+                <input type="file" id="file-input" accept=".pdf"> <!-- Campo para subir el archivo PDF -->
+
+                <label for="additional-description">Descripción adicional</label> <!-- Etiqueta para descripción adicional -->
+                <textarea id="additional-description" placeholder="Da una descripción para que conozcan un poco mas acerca de tu perfil..."></textarea> 
+
+                <button type="button" onclick="submitApplication()">Enviar Postulación</button> <!-- Botón para enviar la postulación -->
+            </div>
+        </div>
+
+        <!-- Estado de Postulaciones -->
+        <div class="postulation-status"> 
+            <h2>Estado de Postulaciones</h2> <!-- Título de la sección -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Empresa</th> 
+                        <th>Estado</th> 
+                        <th>Acción</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google</td> 
+                        <td>Pendiente</td> 
+                        <td><button>Cancelar Postulación</button></td> <!-- Botón para cancelar la postulación -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Empresas con Convenio -->
+        <div class="companies"> <!-- Sección para listar empresas con convenio -->
+            <h2>Empresas con Convenio</h2> <!-- Título de la sección -->
+            <ul> <!-- Lista de empresas -->
+                <li><strong>Google</strong> - Práctica en Desarrollo de Software</li> 
+                <li><strong>Tesla</strong> - Práctica en Análisis de Datos</li> 
+                <li><strong>Netflix</strong> - Práctica en Streaming de Contenido</li> 
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer"> <!-- Pie de página -->
+        <p>&copy; 2024 Universidad Laica Eloy Alfaro de Manabí | Todos los derechos reservados.</p> 
+    </div>
+
+    <script src="scripts.js"></script> 
+</body>
+</html>

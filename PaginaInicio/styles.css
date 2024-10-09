@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra superior gris */
+.top-bar {
+    background-color: #808080; /* Gris */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo de la parte superior izquierda */
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 20px;
+}
+
+/* Enlaces de navegación en la barra superior */
+.navigation a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* Barra principal roja */
+.main-bar {
+    background-color: #ff0000; /* Rojo */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.main-bar h1 {
+    margin: 0;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 400px; /* Ajustar el tamaño total */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f0f0f0; /* Fondo gris claro */
+    margin: 20px auto; /* Centrado y espaciado */
+}
+
+/* Estilo de las imágenes */
+.slideshow-image {
+    width: 70%; /* Ajustar el tamaño de las imágenes */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: opacity 1.5s ease-in-out; /* Suavizar la transición */
+    object-fit: cover; /* Evitar distorsión */
+}
+
+/* Cada slide debe ocupar toda la pantalla */
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sección de contenido inferior */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.info, .login {
+    width: 48%;
+}
+
+/* Estilos para los campos de texto en la sección de inicio de sesión */
+.login input[type="text"], .login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Cambiar la fuente de la sección de login */
+.login {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Nueva fuente */
+}
+
+.forgot-password {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #808080;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Pie de página */
+footer {
+    background-color: #808080; 
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Información de contacto */
+.footer-contact {
+    text-align: left;
+}
+
+.footer-contact h4 {
+    color: #FFC107; 
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    color: white;
+    font-size: 14px;
+}
+
+/* Espacio para logo ULEAM */
+.footer-logo-center {
+    text-align: center;
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+}
+
+/* Redes sociales */
+.footer-social {
+    text-align: right;
+}
+
+.social-icons a img {
+    margin: 0 10px;
+    height: 40px;
+    width: auto;
+}
+
+.footer-social p {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+}
